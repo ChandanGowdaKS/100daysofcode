@@ -1,25 +1,25 @@
 #                               Roller Coaster Ticket
 
-# print("Hi Welcome to Roller Coaster")
+print("Hi Welcome to Roller Coaster")
 
-# age = int(input("Please Enter Your Age"))
-# bill = 0
-#
-# if age <= 12:
-#     print("Your Ticket Price is $7")
-#     bill = 7
-# elif age <=18:
-#     print("Your Ticket Price is $10")
-#     bill = 10
-# else:
-#     print("Your Ticket Price is $15")
-#     bill = 15
-#
-# photo = input("Do You Want Photo, Which Will Cost extra $3, \n Type 'y' or 'n' ")
-# if photo == "y":
-#     print(f"Your Ticket Price is ${bill+3}")
-# else:
-#     print(f"Your Ticket Price is ${bill}")
+age = int(input("Please Enter Your Age"))
+bill = 0
+
+if age <= 12:
+    print("Your Ticket Price is $7")
+    bill = 7
+elif age <=18:
+    print("Your Ticket Price is $10")
+    bill = 10
+else:
+    print("Your Ticket Price is $15")
+    bill = 15
+
+photo = input("Do You Want Photo, Which Will Cost extra $3, \n Type 'y' or 'n' ")
+if photo == "y":
+    print(f"Your Ticket Price is ${bill+3}")
+else:
+    print(f"Your Ticket Price is ${bill}")
 
 
 
