@@ -1,5 +1,5 @@
 #                                       Stone Paper Scissors Game
-from encodings.ascii import StreamConverter
+
 
 
 stone =("""
