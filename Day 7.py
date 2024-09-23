@@ -1,23 +1,53 @@
-# from Day4 import user_input
-# from Day4 import user_input
+# from Day4 import guess
+# from Day4 import guess
+# import random
+#
+# word_list = ["aardvark", "baboon", "camel"]
+#
+# # TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word. Then print it.
+#
+# # TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
+#
+# # TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word. Print "Right" if it
+# #  is, "Wrong" if it's not.
+#
+#
+# chosen_word = random.choice(word_list)
+# print(chosen_word)
+#
+# guess = input("Hi  guess the letter ").lower()
+# print(guess)
+#
+#
+# # while guess != chosen_word:
+#
+# for letter in chosen_word:
+#     if letter == guess:
+#         print("Right")
+#     else:
+#         print("Wrong")
 
-word_list = ["aardvark", "baboon", "camel"]
 
-# TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word. Then print it.
+import random
+word_list = ["chandu", "theju", "ambi"]
 
-# TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
+chosen_word = random.choice(word_list)
+print(chosen_word)
 
-# TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word. Print "Right" if it
-#  is, "Wrong" if it's not.
+placeholder = ""
+# word_length = len(chosen_word)
+for letter in chosen_word:
+    placeholder += "_"
+print(placeholder)
 
-chosen_word = "camel"
+display = ""
 
-user_inputt = input("enter the guessed letter to check")
-
-while user_inputt != chosen_word:
-    user_inputt = input("enter the guessed letter to check")
+while display != chosen_word:
+    guess = input("Guess a letter: ").lower()
     for letter in chosen_word:
-        if letter == user_inputt:
-            print("Right")
+        if letter == guess:
+            display += letter
         else:
-            print("Wrong")
+            display += "_"
+    print(display)
+print("Wow You won")
