@@ -87,5 +87,105 @@ while game:
         game = False
         print("Wow You won")
 
+# Sep 25/2024
+
+import random
+
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+word_list = ["chandu", "theju", "ambi"]
+
+chosen_word = random.choice(word_list)
+print(chosen_word)
+
+lives = 6
+
+placeholder = ""
+# word_length = len(chosen_word)
+for letter in chosen_word:
+    placeholder += "_"
+print(placeholder)
+
+correct_letter = []
+
+game = True
+while game:
+    guess = input("Guess a letter: ").lower()
+    display = ""
+    for letter in chosen_word:
+        if letter == guess:
+            display += letter
+            correct_letter.append(letter)
+        elif letter in correct_letter:
+            display += letter
+        else:
+            display += "_"
+    if guess not in chosen_word:
+        lives -= 1
+        print(lives)
+        print(stages[lives])
+    if lives == 0:
+        print("Game Over")
+        break
+    print(display)
+
+    if "_" not in display:
+        game = False
+        print("Wow You won")
+
 
 
