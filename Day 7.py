@@ -51,3 +51,41 @@ while display != chosen_word:
             display += "_"
     print(display)
 print("Wow You won")
+
+
+# sep 24 
+
+import random
+word_list = ["chandu", "theju", "ambi"]
+
+chosen_word = random.choice(word_list)
+print(chosen_word)
+
+placeholder = ""
+# word_length = len(chosen_word)
+for letter in chosen_word:
+    placeholder += "_"
+print(placeholder)
+
+correct_letter = []
+
+game = True
+while game:
+    guess = input("Guess a letter: ").lower()
+    display = ""
+    for letter in chosen_word:
+        if letter == guess:
+            display += letter
+            correct_letter.append(letter)
+        elif letter in correct_letter:
+            display += letter
+        else:
+            display += "_"
+    print(display)
+
+    if "_" not in display:
+        game = False
+        print("Wow You won")
+
+
+
