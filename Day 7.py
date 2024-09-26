@@ -187,5 +187,57 @@ while game:
         game = False
         print("Wow You won")
 
+# sep 26
+
+import random
+from Day_7_hangman_word import word_list
+from Day7_hanganman_art import stages, logo
+# word_list = ["chandu", "theju", "ambi"]
+
+chosen_word = random.choice(word_list)
+print(chosen_word)
+
+lives = 6
+
+print(f"You have Total {lives} lives")
+print(logo)
+
+placeholder = ""
+# word_length = len(chosen_word)
+for letter in chosen_word:
+    placeholder += "_"
+print(placeholder)
+
+correct_letter = []
+
+game = True
+while game:
+    guess = input("Guess a letter: ").lower()
+    if guess in correct_letter:
+        print("You Already Guessed this letter")
+    display = ""
+    for letter in chosen_word:
+        if letter == guess:
+            display += letter
+            correct_letter.append(letter)
+        elif letter in correct_letter:
+            display += letter
+            print("You already Guessed this Letter")
+        else:
+            display += "_"
+    if guess not in chosen_word:
+        lives -= 1
+        print(f"{lives} lives left")
+        print(stages[lives])
+    if lives == 0:
+        print("Game Over")
+        break
+    print(display)
+
+    if "_" not in display:
+        game = False
+        print("Wow You won")
+
+
 
 
