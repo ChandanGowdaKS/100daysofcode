@@ -99,3 +99,19 @@ shift = int(input("Type the shift number:\n"))
 
 # 30/9 sep Not Tried
 
+letter2 = []
+decode = ''
+def encrypt(original_text,shift_amount):
+    for alpha in original_text:
+        encode = alphabet.index(alpha)
+        letter2 = letter.append(encode)
+        print()
+        
+        for decode2 in encode:
+            decode = decode2.[]
+
+encrypt("chandu",2)
+
+
+
+
