@@ -99,18 +99,45 @@ shift = int(input("Type the shift number:\n"))
 
 # 30/9 sep Not Tried
 
-letter2 = []
-decode = ''
-def encrypt(original_text,shift_amount):
-    for alpha in original_text:
-        encode = alphabet.index(alpha)
-        letter2 = letter.append(encode)
-        print()
+# letter2 = []
+# decode = ''
+# def encrypt(original_text,shift_amount):
+#     for alpha in original_text:
+#         encode = alphabet.index(alpha)
+#         letter2 = letter.append(encode)
+#         print()
         
-        for decode2 in encode:
-            decode = decode2.[]
+#         for decode2 in encode:
+#             decode = decode2.[]
 
-encrypt("chandu",2)
+# encrypt("chandu",2)
+
+# oct 1 2024
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+if direction == "encode":
+    def encrypt(original_text,shift_amount):
+        encode = ""
+        for alpha in original_text:
+            shifted_letter = alphabet.index(alpha) + shift_amount
+            shifted_letter %= len(alphabet)
+            encode += alphabet[shifted_letter]
+        print(encode)
+
+
+    encrypt(original_text=text, shift_amount=shift)
+
+elif direction == "decode":
+    print(text)
+
+else:
+    print("INVAILD INPUT")
+            
 
 
 
