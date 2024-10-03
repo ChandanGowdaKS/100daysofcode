@@ -1,10 +1,3 @@
-# from curses.ascii import isalpha
-#
-# from unicodedata import numeric
-from math import trunc
-
-from select import select
-
 from Day8_2 import logo
 
 print(logo)
