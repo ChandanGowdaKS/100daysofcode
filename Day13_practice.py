@@ -60,13 +60,13 @@ Note: n must be less than the length of the string.'''
 
 '''Write a code to return True if the list’s first and last numbers are the same. If the numbers are different, return False.'''
 
-def same(input_list):
-    if input_list[0] == input_list[-1]:
+#def same(input_list):
+   # if input_list[0] == input_list[-1]:
         return True
-    else:
-        return False
+   # else:
+  #      return False
 
-print(same([10,2,3,4,5,10]))
+#print(same([10,2,3,4,5,10]))
 
 
 
