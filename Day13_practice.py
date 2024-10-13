@@ -67,7 +67,8 @@ Note: n must be less than the length of the string.'''
   #      return False
 
 #print(same([10,2,3,4,5,10]))
-#day 13 of practice
+#day 13 of practice 
+#day 14 no code sorry due to fa exam
 
 
 
