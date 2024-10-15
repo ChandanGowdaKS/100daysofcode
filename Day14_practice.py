@@ -61,6 +61,8 @@ Write a Python code to find how often the substring “Emma” appears in the gi
 #
 # palindrome(858)
 
+# date 15/10/24 no practice. Due to FA exam
+
 
 
 
