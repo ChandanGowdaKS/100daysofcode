@@ -63,6 +63,8 @@ Write a Python code to find how often the substring “Emma” appears in the gi
 
 # date 15/10/24 no practice. Due to FA exam
 
+# date 16/10/24 no practice. Due to FA exam
+
 
 
 
